@@ -79,6 +79,7 @@ router.put('/TicketFull/:id', async (ctx, next) => {
   
   console.log(TicketFull[index]);
 
+  TicketFull[index].id = ctx.request.body.id;
   TicketFull[index].name = ctx.request.body.name;
   TicketFull[index].description = ctx.request.body.description;
   TicketFull[index].status = ctx.request.body.status;
