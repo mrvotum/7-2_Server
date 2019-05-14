@@ -59,7 +59,7 @@ router.get('/TicketFull', async (ctx, next) => {
 router.post('/TicketFull', async (ctx, next) => {
     // create new contact
     // console.log(`ctx.request.body = ${ctx.request.body}`);
-    TicketFull.push({...ctx.request.body, id: uuid.v4()});
+    TicketFull.push({...ctx.request.body});
     ctx.response.status = 204;
 });
 
